@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSON PROFILE</title>
+    <script src="./profile.js"></script>
+</head>
+<body>
+   
+    <table border="1" align="center" width="50%" cellpadding="10" cellspacing="0">
+        <tr>
+            <td colspan="2" align="center"><h2>PERSON PROFILE</h2></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input id="name" type="text"></td>
+
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input id="email" type="email"></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td><input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Other</td>
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td><input id="dd" placeholder="dd" size="2"> /
+                <input id="mm" placeholder="mm" size="2"> /
+                <input id="yyyy" placeholder="yyyy" size="4"></td>  
+
+        </tr>
+        <tr>
+            <td>Blood Group:</td>
+            <td><select id="bloodGroup">
+                    
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select></td>  
+
+        </tr>
+        <tr>
+            <td>Degree:</td>
+            <td><input type="checkbox" name="degree">SSC
+                <input type="checkbox" name="degree">HSC
+                <input type="checkbox" name="degree">BSc</td>
+        </tr>
+        <tr>
+            <td>Profile Picture:</td>
+            <td><input type="file" id="Picture" name="Picture"></td>    
+        </tr>   
+
+        
+          <tr align="right">
+    <td colspan="2">
+        <button onclick="vPersonProfile()">Submit</button>
+        <button type="reset">Reset</button>
+    </td>
+        </tr>
+    </table>
+</body>
+</html>
