@@ -49,5 +49,54 @@ let winConditions = [
 statusText.innerText = "Player X Turn";
 
 for (let i = 0; i < cells.length; i++) {
+    cells[i].addEventListener("click", cellClicked);
+}
+restartButton.addEventListener("click", restartGame);
 
+function cellClicked(){
+    let index = this.getAttribute("cellIndex");
+    if(options[index] !== "" || !running) return;
+
+    options[index] = currentPlayer;
+    this.innerText = currentPlayer;
+
+    checkWinner();
+}
+function changePlayer(){
+    if(currentPlayer === "X") currentPlayer = "O";
+    else currentPlayer = "X";
+
+    statusText.innerText = "Player " + currentPlayer + " Turn";
+}
+function checkWinner(){
+    let win = false;
+    for(let i=0;i<winConditions.length;i++){
+        const [a,b,c] = winConditions[i];
+        if(options[a] === "" || options[b] === "" || options[c] === "") continue;
+        if(options[a] === options[b] && options[b] === options[c]){
+            win = true;
+            break;
+        }
+    }
+
+    if(win){
+        statusText.innerText = "Player " + currentPlayer + " Wins!";
+        running = false;
+    }
+    else if(!options.includes("")){
+        statusText.innerText = "Draw!";
+        running = false;
+    }
+    else{
+        changePlayer();
+    }
+}
+function restartGame(){
+    options = ["","","","","","","","",""];
+    currentPlayer = "X";
+    running = true;
+    statusText.innerText = "Player X Turn";
+    for (let i = 0; i < cells.length; i++) {
+    cells[i].innerText = "";
+}
 }
