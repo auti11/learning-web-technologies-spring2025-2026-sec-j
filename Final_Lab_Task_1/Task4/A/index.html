@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender</title>
+</head>
+<body>
+    <form method="post" action="gender.php">
+<fieldset>
+<legend>GENDER</legend>
+
+<input type="radio" name="gender" value="Male"
+<?php if(isset($_POST['gender']) && $gender=="Male"){echo "checked";} ?>> Male
+
+<input type="radio" name="gender" value="Female"
+<?php if(isset($_POST['gender']) && $gender=="Female"){echo "checked";} ?>> Female
+
+<br><br>
+<input type="submit" name="submit">
+
+</fieldset>
+</form>
+</body>
+</html>
