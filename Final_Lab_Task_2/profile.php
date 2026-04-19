@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// 🔴 protect page
+
 if(!isset($_SESSION['status'])){
     header('location: login.php');
 }
@@ -65,7 +65,7 @@ if(!isset($_SESSION['status'])){
             </fieldset>
         </td>
 
-        <!-- Profile Picture -->
+     
         <td align="center">
             <a href="changePic.php">
                 <img src="<?php 
@@ -78,7 +78,7 @@ if(!isset($_SESSION['status'])){
 
     </tr>
 
-    <!-- Footer -->
+  
     <tr>
         <td colspan="3" align="center">
             Copyright © 2017
