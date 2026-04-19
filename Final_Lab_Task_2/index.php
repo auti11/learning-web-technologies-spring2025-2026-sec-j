@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<table border="1" width="100%">
+<table border="1" width="70%" align="center">
     <tr>
         <td>
             <h2><img src="img1.jpg" alt="" srcset="">XCompany</h2>

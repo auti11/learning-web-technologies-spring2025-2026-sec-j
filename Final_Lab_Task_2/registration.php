@@ -6,7 +6,7 @@
 <body>
 
 
-<table border="1" width="100%">
+<table border="1" width="70%" align="center">
 <tr>
 <td>
     <h2>XCompany</h2>
