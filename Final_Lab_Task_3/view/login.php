@@ -10,7 +10,7 @@
     <form action="../controller/loginCheck.php" method="post">
         Username: <input type="text" name="username" required><br>
         Password: <input type="password" name="password" required><br>
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" name ="submit">
        
     </form>
  <a href="signup.php">Don't have an account? Register here.</a>
